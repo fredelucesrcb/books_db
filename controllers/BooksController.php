@@ -4,7 +4,7 @@ header('Content-type: application/json');
 $server = 'localhost';
 $user = 'root';
 $password = '';
-$db = 'august99';
+$db = 'books_db_fredeluces';
 
 $method = $_REQUEST['action'];
 $conn = mysqli_connect($server, $user, $password, $db);
