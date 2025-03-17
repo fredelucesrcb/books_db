@@ -59,7 +59,7 @@
                 <label for="createTitle" class="form-label">
                     Title
                 </label>
-                <input type="text" class="form-control" id="createTitle">
+                <input type="text" class="form-control" id="createTitle" required>
 
                 <label for="createIsbn" class="form-label">
                     ISBN

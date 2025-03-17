@@ -1,7 +1,9 @@
 $(document).ready(function () {   
+    const BASE_URL = 'books_db';
+
     $.ajax({
         type: "GET",
-        url: "http://localhost/august99/controllers/BooksController.php?action=GET",
+        url: `http://localhost/${BASE_URL}/controllers/BooksController.php?action=GET`,
         cache: false,
         success: function(data){
             $.each( data, function( key, value ) {
@@ -38,7 +40,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost/august99/controllers/BooksController.php?action=CREATE",
+            url: `http://localhost/${BASE_URL}/controllers/BooksController.php?action=CREATE`,
             data: {
                 title: title,
                 isbn: isbn,
@@ -87,7 +89,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost/august99/controllers/BooksController.php?action=EDIT",
+            url: `http://localhost/${BASE_URL}/controllers/BooksController.php?action=EDIT`,
             data: {
                 title: title,
                 isbn: isbn,
@@ -124,7 +126,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost/august99/controllers/BooksController.php?action=DELETE",
+            url: `http://localhost/${BASE_URL}/controllers/BooksController.php?action=DELETE`,
             data: {
                 id: id
             },
